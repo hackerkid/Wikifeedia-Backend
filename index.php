@@ -1,7 +1,12 @@
 <?php
 
+if(!isset($_GET["category"])) {
+	exit();
+}
+
 $category = $_GET["category"];
 //$category = "Chemistry";
+
 
 $url = 'http://en.wikipedia.org/wiki/Special:RandomInCategory/'.$category;	
 
