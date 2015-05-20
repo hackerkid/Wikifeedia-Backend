@@ -34,6 +34,10 @@ while (strpos($page, 'Category') !== false) {
 
 	}
 
+	else {
+		break;
+	}
+
 
 	
 
