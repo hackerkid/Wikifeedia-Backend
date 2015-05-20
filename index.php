@@ -12,7 +12,7 @@ $url = 'http://en.wikipedia.org/wiki/Special:RandomInCategory/'.$category;
 
 $page = 'Category';
 
-while (strpos($page, 'Category') !== false) {
+while (strpos($page, 'Category') !== false or strpos($page, 'Portal') !== false) {
 	//	print $page."\n";
 	$ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
