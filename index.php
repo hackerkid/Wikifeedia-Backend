@@ -46,9 +46,10 @@ while (strpos($page, 'Category') !== false or strpos($page, 'Portal') !== false)
 if (!empty($matches[1])) {
 		$temp = trim($matches[1][0]);
 		$page = str_replace("http://en.wikipedia.org/wiki/", "", $temp);
-		$arr = array('category' => $page);
-		$json = json_encode($arr);
-		print $json;
+		//$arr = array('category' => $page);
+		//$json = json_encode($arr);
+		//print $json;
+		echo $_GET['callback'] . '(' . "{'category' : '$page' }" . ')';
 
 	}
 
