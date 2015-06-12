@@ -29,11 +29,11 @@ $page = 'Category';
 while (strpos($page, 'Category') !== false or strpos($page, 'Portal') !== false) {
 	
 	$temp = getRedirectUrl($url);
-	print $temp[1];
 	
 	if($temp != false) {
 		$page = $temp[1];
 		$page = trim($page);
+		$page = str_replace("https://en.wikipedia.org/wiki/", "", $page);
 		$page = str_replace("http://en.wikipedia.org/wiki/", "", $page);
 	}
 
@@ -48,7 +48,8 @@ while (strpos($page, 'Category') !== false or strpos($page, 'Portal') !== false)
 
 if ($page != false) {
 		$temp2 = trim($page);
-		$page2 = str_replace("http://en.wikipedia.org/wiki/", "", $temp2);
+		$page2 = str_replace("https://en.wikipedia.org/wiki/", "", $temp2);
+		$page2 = str_replace("http://en.wikipedia.org/wiki/", "", $page2);
 		echo $_GET['callback'] . '(' . "{'category' : '$page2' }" . ')';
 
 	}
