@@ -19,7 +19,6 @@ function getRedirectUrl ($url) {
     return false;
 }
 
-$category = "Chemistry";
 
 
 $url = 'http://en.wikipedia.org/wiki/Special:RandomInCategory/'.$category;	
