@@ -3,7 +3,7 @@ if(!isset($_GET["category"])) {
 	exit();
 }
 
-//$category = $_GET["category"];
+$category = $_GET["category"];
 
 
 function getRedirectUrl ($url) {
@@ -53,3 +53,4 @@ if ($page != false) {
 
 	}
 
+?>
