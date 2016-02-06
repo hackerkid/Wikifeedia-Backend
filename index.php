@@ -1,5 +1,6 @@
 <?php
 if(!isset($_GET["category"])) {
+	print "<h1>Wikifeedia backup server 2 says nothing to see here as long as you don't provide the category</h1>";
 	exit();
 }
 
@@ -53,4 +54,3 @@ if ($page != false) {
 
 	}
 
-?>
